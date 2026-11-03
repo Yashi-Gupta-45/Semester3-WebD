@@ -1,0 +1,52 @@
+File system Module:-
+Synchronous Method 
+Asynchronous Method:
+Callback 
+Promises 
+
+C: Create 
+R: Read 
+U: Update 
+D: Delete 
+
+stats.js
+
+const fs = require("fs")
+fs.stat("notes.txt", (err, stats)=>{
+	if(err){
+		console.log(err);
+		return 
+	}
+	console.log("Information about [notes.txt]", stats)
+	console.log("size of the file [notes.txt]", stats.size, "Bytes")
+	console.log("Creation time of the file [notes.txt]", stats.birthtime, toISOString().split("T") [0])
+	console.log("Last Modification Time of the file [notes.txt]", stats.birthtime, toISOString().split("T") [0])
+
+})
+
+sizeChecker.js 
+
+const fs = require("fs")
+
+function sizeCheecker(filename){
+	const limit = 2*1024*1024
+	const stats = fstat.stat(filename)
+
+	
+
+	if(stats.size > limit){
+		console.log('File should be less than $(limit).');
+	}
+	else{
+		console.log("ile has been submitted");
+	}
+}
+sizeChecker("notes.txt")
+
+fs.stat(""./myFolder", (err, stats)=>{
+	if(err){
+		console.log(err);
+		return
+	}
+	console.log(stats.size);
+})

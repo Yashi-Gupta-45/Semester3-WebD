@@ -1,0 +1,11 @@
+import express from 'express'
+import fs from 'fs'
+
+
+cons app = express()
+
+
+app.get("/get/c1/books", (req, res) =>{
+	req.json{(
+		status: "success";
+		data
